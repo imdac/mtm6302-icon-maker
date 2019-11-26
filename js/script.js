@@ -11,6 +11,9 @@ const $icons = document.getElementById('icons')
 const $colors = document.getElementById('colors')
 
 // Event Listeners
+function createIcon () {
+  $icon.className = `icon-${maker.icon}-${maker.color}`
+}
 
 $icons.addEventListener('click', function (e) {
   if (e.target.dataset.icon) {
