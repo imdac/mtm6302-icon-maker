@@ -3,9 +3,25 @@ const icons = ['forbidden', 'printer', 'menu', 'bell', 'briefcase', 'calendar', 
 
 const maker = {
   icon: 'forbidden',
-  color: 'red'
+  color: 'black'
 }
 
 const $icon = document.getElementById('icon')
 const $icons = document.getElementById('icons')
 const $colors = document.getElementById('colors')
+
+// Event Listeners
+
+$icons.addEventListener('click', function (e) {
+  if (e.target.dataset.icon) {
+    maker.icon = e.target.dataset.icon
+    createIcon()
+  }
+})
+
+$colors.addEventListener('click', function (e) {
+  if (e.target.dataset.color) {
+    maker.color = e.target.dataset.color
+    createIcon()
+  }
+})
